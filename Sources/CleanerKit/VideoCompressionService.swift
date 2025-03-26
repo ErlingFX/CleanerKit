@@ -5,7 +5,7 @@ import Foundation
 import Photos
 import AVFoundation
 
-final class VideoCompressionService {
+public final class VideoCompressionService {
     
     enum VideoQuality: String, CaseIterable, Hashable, Identifiable {
         

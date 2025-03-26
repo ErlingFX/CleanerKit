@@ -6,7 +6,7 @@ import Foundation
 import Photos
 import UIKit
 
-class PhotoRequestService {
+public final class PhotoRequestService {
     
     static let shared = PhotoRequestService()
     
