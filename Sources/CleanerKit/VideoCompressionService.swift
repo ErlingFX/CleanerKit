@@ -31,7 +31,7 @@ final class VideoCompressionService {
 
     private init() { }
     
-    func compressAndReplaceVideo(
+    public func compressAndReplaceVideo(
         asset: PHAsset,
         quality: VideoQuality = .medium
     ) async throws {

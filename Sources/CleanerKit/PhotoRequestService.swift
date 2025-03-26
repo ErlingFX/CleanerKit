@@ -12,14 +12,14 @@ class PhotoRequestService {
     
     private init() {}
     
-    func getAssets(of type: PHAssetMediaType, indexes: [Int]? = nil) async -> [PHAsset] {
+    public func getAssets(of type: PHAssetMediaType, indexes: [Int]? = nil) async -> [PHAsset] {
         return await withCheckedContinuation { cont in
             self.getAssets(of: type, indexes: indexes) { assets in
                 cont.resume(returning: assets)
             }
         }
     }
-    func getAssets(
+    public func getAssets(
         of type: PHAssetMediaType,
         indexes: [Int]? = nil,
         queryCallback: @escaping (([PHAsset]) -> Void)

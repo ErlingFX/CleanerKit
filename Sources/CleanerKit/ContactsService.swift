@@ -17,7 +17,7 @@ final class ContactsService {
     private init() {}
     
     /// Проверяет и запрашивает доступ к контактам
-    func requestAccess() async -> Bool {
+    public func requestAccess() async -> Bool {
         let status = CNContactStore.authorizationStatus(for: .contacts)
         
         switch status {
@@ -37,7 +37,7 @@ final class ContactsService {
     }
     
     /// Извлекает контакты (если разрешение получено)
-    func fetchContacts() async -> [CNContact]? {
+    public func fetchContacts() async -> [CNContact]? {
         guard await requestAccess() else { return nil }
         
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey] as [CNKeyDescriptor]
@@ -56,7 +56,7 @@ final class ContactsService {
         }
     }
     
-    func deleteContactFromDevice(identifier: String) -> Bool {
+    public func deleteContactFromDevice(identifier: String) -> Bool {
         guard let contact = fetchedContacts.first(where: { $0.identifier == identifier }) else { return false }
         guard let contactToDelete = contact.mutableCopy() as? CNMutableContact else { return false }
         

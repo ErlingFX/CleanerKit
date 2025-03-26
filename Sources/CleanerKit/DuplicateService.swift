@@ -29,7 +29,7 @@ class DuplicateService {
 
     private init() {}
     
-    func findSimilarImage(assetList: [PHAsset]) async -> [[PHAsset]] {
+    public func findSimilarImage(assetList: [PHAsset]) async -> [[PHAsset]] {
         return await withCheckedContinuation { cont in
             findSimilarImage(assetList: assetList) { array in
                 cont.resume(returning: array)
@@ -37,7 +37,7 @@ class DuplicateService {
         }
     }
         
-    func findSimilarImage(
+    public func findSimilarImage(
         assetList: [PHAsset],
         queryCallback: @escaping (([[PHAsset]]) -> Void)
     ) {
@@ -180,7 +180,7 @@ class DuplicateService {
         }
     }
     
-    func findDuplicatePhotos(assetsArray: [[PHAsset]]) async -> [[PHAsset]] {
+    public func findDuplicatePhotos(assetsArray: [[PHAsset]]) async -> [[PHAsset]] {
         return await withCheckedContinuation { cont in
             findDuplicatePhotos(assetsArray: assetsArray) { array in
                 cont.resume(returning: array)
@@ -188,7 +188,7 @@ class DuplicateService {
         }
     }
     
-    func findDuplicatePhotos(
+    public func findDuplicatePhotos(
         assetsArray: [[PHAsset]],
         queryCallback: @escaping (([[PHAsset]]) -> Void)
     ) {
@@ -272,7 +272,7 @@ class DuplicateService {
         }
     }
     
-    func findDuplicateVideos(assetsArray: [PHAsset]) async -> [[PHAsset]] {
+    public func findDuplicateVideos(assetsArray: [PHAsset]) async -> [[PHAsset]] {
         print("❇️ Start \(#function)")
         let startDate = Date().timeIntervalSinceReferenceDate
         
