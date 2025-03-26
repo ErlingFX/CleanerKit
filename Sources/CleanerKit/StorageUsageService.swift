@@ -11,15 +11,13 @@ public final class StorageUsageService: NSObject, ObservableObject {
         
     static let shared = StorageUsageService()
 
-    @Published var totalMediaCount: Int = 0
-    @Published var totalPhotoCount: Int = 0
-    @Published var totalVideoCount: Int = 0
-    
-    @Published var totalStorageSpace: Double = 0
-    
-    @Published var usedStorageSpace: Double = 0
-    @Published var usedPhotoSpace: Double = 0
-    @Published var usedVideoSpace: Double = 0
+    @Published public var totalMediaCount: Int = 0
+    @Published public var totalPhotoCount: Int = 0
+    @Published public var totalVideoCount: Int = 0
+    @Published public var totalStorageSpace: Double = 0
+    @Published public var usedStorageSpace: Double = 0
+    @Published public var usedPhotoSpace: Double = 0
+    @Published public var usedVideoSpace: Double = 0
         
     private override init() {
         super.init()
