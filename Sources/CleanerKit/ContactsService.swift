@@ -7,7 +7,7 @@
 import Foundation
 import Contacts
 
-final class ContactsService {
+public final class ContactsService {
     
     static let shared = ContactsService()
     private let contactStore = CNContactStore()

@@ -3,16 +3,16 @@
 //
 
 import CocoaImageHashing
-import StorageManager
+//import StorageManager
 import CommonCrypto
 import Photos
 import Vision
 import Combine
 import MetalPerformanceShaders
 import MetalKit
-import SwifterSwift
+//import SwifterSwift
 
-class DuplicateService {
+public class DuplicateService {
     
     static let shared = DuplicateService()
     

@@ -7,7 +7,7 @@
 import Foundation
 import Photos
 
-final class StorageUsageService: NSObject, ObservableObject {
+public final class StorageUsageService: NSObject, ObservableObject {
         
     static let shared = StorageUsageService()
 
