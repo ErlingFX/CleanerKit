@@ -7,9 +7,9 @@ import AVFoundation
 
 public final class VideoCompressionService {
     
-    enum VideoQuality: String, CaseIterable, Hashable, Identifiable {
+    public enum VideoQuality: String, CaseIterable, Hashable, Identifiable {
         
-        var id: String { rawValue }
+        public var id: String { rawValue }
         
         case low
         case medium
