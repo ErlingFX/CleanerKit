@@ -2,7 +2,6 @@
 //  ContactsService.swift
 //  Cleaner
 //
-//  Created by Александр Назаров on 26.03.2025.
 //
 
 import Foundation

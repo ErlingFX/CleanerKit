@@ -2,7 +2,6 @@
 //  StorageUsageService.swift
 //  Cleaner
 //
-//  Created by Александр Назаров on 24.03.2025.
 //
 
 import Foundation
