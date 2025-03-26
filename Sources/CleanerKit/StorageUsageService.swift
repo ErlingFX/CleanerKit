@@ -77,8 +77,7 @@ private extension StorageUsageService {
 
 extension StorageUsageService: PHPhotoLibraryChangeObserver {
     
-    func photoLibraryDidChange(_ changeInstance: PHChange) {
+    public func photoLibraryDidChange(_ changeInstance: PHChange) {
         fetchData()
     }
 }
-
