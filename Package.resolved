@@ -1,0 +1,15 @@
+{
+  "originHash" : "16f29b1ae93050d9561f654f17b27746c1cba14ce7983f1bfb99c0cceb2ef539",
+  "pins" : [
+    {
+      "identity" : "cocoaimagehashing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ameingast/cocoaimagehashing.git",
+      "state" : {
+        "revision" : "ad01eee3c3f91bd181f7f4eba7f48f7cb211b51c",
+        "version" : "1.9.0"
+      }
+    }
+  ],
+  "version" : 3
+}
