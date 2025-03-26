@@ -6,20 +6,19 @@ import PackageDescription
 let package = Package(
     name: "CleanerKit",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "CleanerKit",
             targets: ["CleanerKit"]),
     ],
     dependencies: [
         // Добавляем зависимость CocoaImageHashing
-        .package(url: "https://github.com/ameingast/cocoaimagehashing.git", from: "1.9.0")  // Используйте версию, которая вам нужна
+        .package(url: "https://github.com/ameingast/cocoaimagehashing.git", from: "1.9.0")
     ],
     targets: [
         // Определение основного таргета
         .target(
             name: "CleanerKit",
-            dependencies: ["CocoaImageHashing"]),  // Указываем зависимость для таргета
+            dependencies: [.product(name: "CocoaImageHashing", package: "CocoaImageHashing")]),
         // Определение тестового таргета
         .testTarget(
             name: "CleanerKitTests",
